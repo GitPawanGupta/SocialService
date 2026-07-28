@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Growth Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <source src="./video1.mp4" type="video/mp4">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1><i class="fas fa-rocket"></i> Growth Services</h1>
+            </div>
+            <div class="nav-links">
+                <a href="#youtube" class="nav-link">YouTube</a>
+                <a href="#facebook" class="nav-link">Facebook</a>
+                <a href="#instagram" class="nav-link">Instagram</a>
+                <button class="cart-btn" onclick="toggleCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <div class="hero-video-bg">
+            <video autoplay muted loop playsinline id="heroVideo">
+                <source src="./video2.mp4" type="video/mp4">
+
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-video-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Boost Your Social Media Presence</h1>
+            <p class="hero-subtitle">Premium Quality • Fast Delivery • 24/7 Support</p>
+        </div>
+    </div>
+
+    <!-- Floating Particles for Colorful Background -->
+    <div id="particles-container"></div>
+
+    <!-- YouTube Services -->
+    <section id="youtube" class="platform-section">
+        <div class="platform-header">
+            <i class="fab fa-youtube"></i>
+            <h2>YouTube Growth Services</h2>
+        </div>
+        <div class="services-grid" id="youtubeServices"></div>
+    </section>
+
+    <!-- Facebook Services -->
+    <section id="facebook" class="platform-section">
+        <div class="platform-header">
+            <i class="fab fa-facebook"></i>
+            <h2>Facebook Growth Services</h2>
+        </div>
+        <div class="services-grid" id="facebookServices"></div>
+    </section>
+
+    <!-- Instagram Services -->
+    <section id="instagram" class="platform-section">
+        <div class="platform-header">
+            <i class="fab fa-instagram"></i>
+            <h2>Instagram Growth Services</h2>
+        </div>
+        <div class="services-grid" id="instagramServices"></div>
+    </section>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2><i class="fas fa-shopping-cart"></i> Your Cart</h2>
+            <button class="close-cart" onclick="toggleCart()">×</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-summary"></div>
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cartTotal">₹0</span>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">
+                <i class="fas fa-credit-card"></i>
+                <span>Proceed to Payment</span>
+            </button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2026 Growth Services. All rights reserved.</p>
+            <p>100% Safe & Reliable • Trusted Service • Affordable Prices</p>
+        </div>
+    </footer>
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
